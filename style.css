@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    width: 840px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#dude {
+    position: absolute;
+    background-image: url("pickle.png");
+    top: 360px;
+    left: 0px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.floor {
+    background-color: white;
+}
+
+.wall {
+    background-color: navy;
+}
+
+.finish {
+    background-image: url("peach.png");
+}
