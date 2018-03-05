@@ -68,6 +68,10 @@ document.addEventListener("keydown", event => {
     if (key === "ArrowRight" && mapArray[currentRow][currentPos + 1] === " ") {
         leftPos += 40;
         dude.style.left = leftPos + "px";
+        dude.className = "cell slideRight";
+        setTimeout(function() {
+            dude.className = "cell";
+        }, 100);
         mapArray[currentRow][currentPos + 1] = "S";
         mapArray[currentRow][currentPos] = " ";
         currentPos++;
@@ -77,6 +81,10 @@ document.addEventListener("keydown", event => {
     if (key === "ArrowUp" && mapArray[currentRow - 1][currentPos] === " ") {
         topPos -= 40;
         dude.style.top = topPos + "px";
+        dude.className = "cell slideUp";
+        setTimeout(function() {
+            dude.className = "cell";
+        }, 100);
         mapArray[currentRow - 1][currentPos] = "S";
         mapArray[currentRow][currentPos] = " ";
         currentRow--
@@ -86,6 +94,10 @@ document.addEventListener("keydown", event => {
     if (key === "ArrowLeft" && mapArray[currentRow][currentPos - 1] === " ") {
         leftPos -= 40;
         dude.style.left = leftPos + "px";
+        dude.className = "cell slideLeft";
+        setTimeout(function() {
+            dude.className = "cell";
+        }, 100);
         mapArray[currentRow][currentPos - 1] = "S";
         mapArray[currentRow][currentPos] = " ";
         currentPos--;
@@ -95,6 +107,10 @@ document.addEventListener("keydown", event => {
     if (key === "ArrowDown" && mapArray[currentRow + 1][currentPos] === " ") {
         topPos += 40;
         dude.style.top = topPos + "px";
+        dude.className = "cell slideDown";
+        setTimeout(function() {
+            dude.className = "cell";
+        }, 100);
         mapArray[currentRow + 1][currentPos] = "S";
         mapArray[currentRow][currentPos] = " ";
         currentRow++
@@ -104,7 +120,9 @@ document.addEventListener("keydown", event => {
     if (key === "ArrowRight" && mapArray[currentRow][currentPos + 1] === "F") {
         leftPos += 40;
         dude.style.left = leftPos + "px";
+        dude.className = "cell slideRight";
         setTimeout(function(){
+            dude.className = "cell";
             alert("You did it! Congratulations!");
             mapArray[currentRow][currentPos] = " ";
             currentRow = 9;
@@ -114,6 +132,6 @@ document.addEventListener("keydown", event => {
             dude.style.left = leftPos + "px";
             dude.style.top = topPos + "px";
             mapArray[9][0] = "S";
-        }, 10);
+        }, 100);
     }
 });

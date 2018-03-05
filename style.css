@@ -18,6 +18,7 @@ body {
     background-image: url("pickle.png");
     top: 360px;
     left: 0px;
+    animation-duration: 100ms;
 }
 
 .cell {
@@ -40,3 +41,27 @@ body {
     background-image: url("peach.png");
     background-color: rgb(200,200,200);
 }
+
+@keyframes slideRight {
+    from {margin-left: -40px;}
+    to {margin-left: 0;}
+}
+.slideRight {animation-name: slideRight;}
+
+@keyframes slideLeft {
+    from {margin-left: 40px;}
+    to {margin-left: 0px;}
+}
+.slideLeft {animation-name: slideLeft;}
+
+@keyframes slideUp {
+    from {margin-top: 40px;}
+    to {margin-top: 0;}
+}
+.slideUp {animation-name: slideUp;}
+
+@keyframes slideDown {
+    from {margin-top: -40px;}
+    to {margin-top: 0;}
+}
+.slideDown {animation-name: slideDown;}
